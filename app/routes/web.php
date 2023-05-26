@@ -28,6 +28,7 @@ Route::middleware([
 ])->group(function () {
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
+    Route::get('/edit_details/{id}',[AdminController::class,'edit_details']);
 
     Route::post('/insert',[AdminController::class,'insert']);
 });
