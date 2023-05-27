@@ -31,4 +31,6 @@ Route::middleware([
     Route::get('/edit_details/{id}',[AdminController::class,'edit_details']);
 
     Route::post('/insert',[AdminController::class,'insert']);
+
+    Route::get('/delete/{id}',[AdminController::class,'delete']);
 });
