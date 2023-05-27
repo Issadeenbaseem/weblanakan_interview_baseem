@@ -19,8 +19,6 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -29,6 +27,8 @@ Route::middleware([
     Route::get('/dashboard', [AdminController::class, 'index'])->name('dashboard');
 
     Route::get('/edit_details/{id}',[AdminController::class,'edit_details']);
+
+    Route::post('/edit_details_view/{id}',[AdminController::class,'edit_details_view']);
 
     Route::post('/insert',[AdminController::class,'insert']);
 
