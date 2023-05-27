@@ -32,5 +32,7 @@ Route::middleware([
 
     Route::post('/insert',[AdminController::class,'insert']);
 
+    Route::get('search',[AdminController::class,'search']);
+
     Route::get('/delete/{id}',[AdminController::class,'delete']);
 });
